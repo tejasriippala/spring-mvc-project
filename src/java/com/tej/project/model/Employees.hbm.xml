@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 5 Oct, 2018 5:05:34 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.tej.project.model.Employees" table="employees" schema="public" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="fname" type="string">
+            <column name="fname" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="50" not-null="true" />
+        </property>
+        <property name="designation" type="string">
+            <column name="designation" length="355" not-null="true" unique="true" />
+        </property>
+        <property name="pay" type="string">
+            <column name="pay" length="50" not-null="true" />
+        </property>
+        <property name="department" type="string">
+            <column name="department" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
